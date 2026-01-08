@@ -1,5 +1,7 @@
 import UIKit
 
+//1 - Using Set
+
 func longestSubStringWithoutRepeatChars(s:String)->(Int, String){
     let chars = Array(s)
     var seen = Set<Character>()
@@ -8,7 +10,8 @@ func longestSubStringWithoutRepeatChars(s:String)->(Int, String){
     var start = 0
     
     for right in 0..<chars.count{
-        if seen.contains(chars[right]){
+        
+        while seen.contains(chars[right]){
             seen.remove(chars[left])
             left += 1
         }
@@ -27,3 +30,34 @@ func longestSubStringWithoutRepeatChars(s:String)->(Int, String){
 
 
 print(longestSubStringWithoutRepeatChars(s: "ababbcade"))
+
+// Using Dictinary
+
+//func longestSubStringWithoutRepeatChars(s:String)->(Int, String){
+//    let chars = Array(s)
+//    var dict = [Character : Int]()
+//    var left = 0
+//    var maxLenth = 0
+//    var start = 0
+//    
+//    for right in 0..<chars.count{
+//        let char = chars[right]
+//        
+//        if let charsIndex = dict[char]{
+//            left = max(left, charsIndex + 1)
+//        }
+//        
+//        dict[char] = right
+//        
+//        var currLen = right - left + 1
+//        
+//        if currLen > maxLenth{
+//            maxLenth = currLen
+//            start = left
+//        }
+//    }
+//    
+//    return (maxLenth, String(chars[start..<start + maxLenth]))
+//}
+//
+//print(longestSubStringWithoutRepeatChars(s: "ababbcade"))
