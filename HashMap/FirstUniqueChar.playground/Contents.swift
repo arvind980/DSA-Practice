@@ -1,5 +1,8 @@
 import UIKit
 
+/*
+// Using Hashmap and and chars frequence
+ 
 func firstUniqueChar(s:String)->Int{
     var map = [Character:Int]()
     var charArr = Array(s)
@@ -16,6 +19,29 @@ func firstUniqueChar(s:String)->Int{
     return -1
 }
  
+ */
+
+// Optimise version Using Hashmap and chars asscii value index
+
+func firstUniqueChar(s:String)->Int{
+    let chars = Array(s)
+    var count = Array(repeating: 0, count: 26)
+    
+    for i in 0..<chars.count{
+        let index = Int(chars[i].asciiValue! - Character("a").asciiValue!)
+        count[index] += 1
+    }
+    
+    for i in 0..<chars.count{
+        let index = Int(chars[i].asciiValue! - Character("a").asciiValue!)
+        if count[index] == 1{
+            return i
+        }
+    }
+    
+    return -1
+}
+
 
 
 let st = "ddffg"
