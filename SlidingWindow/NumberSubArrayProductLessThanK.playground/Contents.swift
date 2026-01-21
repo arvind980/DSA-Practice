@@ -1,7 +1,8 @@
 import UIKit
 
-func numSubArrayProductLessThanK(nums:[Int], k:Int)->Int{
-    guard k > 1 else { return 0 }
+func numSubArrayProductLessThanK(nums:[Int], k:Int)->(Int,[[Int]]){
+    guard k > 1 else { return (0, [[]]) }
+    var result = [[Int]]()
     var count = 0
     var left = 0
     var product = 1
@@ -15,9 +16,14 @@ func numSubArrayProductLessThanK(nums:[Int], k:Int)->Int{
         }
         
         count += right - left + 1
+        var arr = [Int]()
+        for i in stride(from: right, to: left, by: -1){
+            arr.append(nums[i])
+            result.append(arr)
+        }
     }
     
-    return count
+    return (count, result)
 }
 
 print(numSubArrayProductLessThanK(nums: [10, 5, 2, 6], k: 100))
