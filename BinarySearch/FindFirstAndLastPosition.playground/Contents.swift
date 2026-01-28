@@ -46,4 +46,4 @@ func findFirstAndLastIndex(nums:[Int],target:Int)->[Int]{
     return [findFirts(), findLast()]
 }
 
-print(findFirstAndLastIndex(nums:[2,3,5,5,8,9],target:5))
+print(findFirstAndLastIndex(nums:[5,5,5,5,5,5,5,5,5,5,5,5],target:5))
