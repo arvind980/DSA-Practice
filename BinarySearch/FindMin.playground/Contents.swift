@@ -10,14 +10,14 @@ func findMin(nums:[Int])->Int{
         if nums[mid] > nums[right]{
             left = mid + 1
         }else{
-            right = mid - 1
+            right = mid
         }
     }
     
     return nums[left]
 }
 
-print(findMin(nums:[2,3,5,7,9,12,22]))
+print(findMin(nums:[7,9,12,22,1,2,3,5]))
 
 /*
  ⏱️ Complexity
