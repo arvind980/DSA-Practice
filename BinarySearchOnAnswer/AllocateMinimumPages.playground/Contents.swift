@@ -1,5 +1,13 @@
 import UIKit
 
+/*
+ 1- Allocate Minimum Pages
+ 2- Split Array Largest Sum
+ 3- Capacity to Ship Packages
+
+ is basically the same pattern as Allocate Minimum Pages — just a different story.
+ */
+
 func allocateMinimumPages(pages:[Int], students:Int)->Int{
     guard pages.count >= students else {return -1}
     var left = pages.max()!
