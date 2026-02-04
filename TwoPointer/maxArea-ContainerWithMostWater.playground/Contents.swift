@@ -24,3 +24,8 @@ func maxArea(hight:[Int])->Int{
 }
 
 print(maxArea(hight: [1,8,6,2,5,4,8,3,7]))
+
+/*
+ Time Complexity: O(n)
+ Space Complexity: O(1)
+ */

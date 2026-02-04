@@ -30,7 +30,7 @@ func topKfrequentsElemets(nums:[Int], k:Int)->[Int]{
     return []
 }
 
-print(topKfrequentsElemets(nums: [1,1,3,1,4,2,3,4,1,5,7,5,5], k: 3))
+print(topKfrequentsElemets(nums: [2,3,3,4,5,6,7,5,4,2,2], k: 3))
 
 // ⏱️ Complexity
 // Time    O(n)

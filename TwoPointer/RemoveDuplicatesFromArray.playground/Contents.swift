@@ -19,6 +19,14 @@ import UIKit
 //print(removeDuplicatesFromSortedArray(nums: &arr))
 //print(arr)
 
+/*
+ ⏱️ Complexity
+
+ Time: O(n)
+
+ Space: O(1)
+ */
+
 //UnSorted array and Order preserved
 func removeDuplicatesWithOrderPreserved(nums:[Int])->[Int]{
     var seen = Set<Int>()
@@ -35,3 +43,11 @@ func removeDuplicatesWithOrderPreserved(nums:[Int])->[Int]{
 }
 
 print(removeDuplicatesWithOrderPreserved(nums: [2,3,1,3,4,1,6,4,7,5,3,1,5,6]))
+
+/*
+ Complexity
+
+ Time: O(n)
+
+ Space: O(n) (Set + result array)
+ */
