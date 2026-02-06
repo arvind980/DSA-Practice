@@ -31,7 +31,7 @@ func minmaxGasDist(stations:[Int], newStationsAllowed:Int)->Double{
     return right
 }
 
-print(minmaxGasDist(stations:[1,10], newStationsAllowed:1))
+print(minmaxGasDist(stations:[1,10], newStationsAllowed:2))
 
 /*
  Complexity (and WHY)
